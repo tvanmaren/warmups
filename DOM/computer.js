@@ -12,6 +12,7 @@ function randomChoice() {
   } else {
     computer = "scissors";
   }
+  console.log(computer);
   return;
 }
 

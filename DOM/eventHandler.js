@@ -1,23 +1,25 @@
 'use strict';
 
 const $wins = $('#wins');
-const $losses=$('#losses');
+const $losses = $('#losses');
 
 function parseInput(event) {
-  let clicked = event.target;
-  let choice = clicked.text();
+  let $clicked = $(event.target);
+  let choice = $clicked.attr('id');
+  console.log(choice);
   compareChoices(choice);
 }
 
 function feedback(won) {
-  switch (winner) {
+  console.log(won);
+  switch (won) {
   case (true):
     let wins = parseInt($wins.text());
     wins++;
     $wins.text(wins.toString());
     break;
   case (false):
-    let losses=parseInt($losses.text());
+    let losses = parseInt($losses.text());
     losses++;
     $losses.text(losses.toString());
     break;
@@ -31,7 +33,8 @@ function reset() {
   randomChoice();
 }
 
-$(
-  $('#buttons').click(parseInput);
+$(document).ready(()=>{
+  $('.buttons').click(parseInput);
   $('#reset').click(reset);
+}
 );

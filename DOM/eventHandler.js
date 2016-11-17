@@ -1,5 +1,8 @@
 'use strict';
 
+const $wins = $('#wins');
+const $losses=$('#losses');
+
 function parseInput(event) {
   let clicked = event.target;
   let choice = clicked.text();
@@ -7,25 +10,25 @@ function parseInput(event) {
 }
 
 function feedback(won) {
-  let $wins = $('#wins');
-  let $losses=$('#losses');
   switch (winner) {
   case (true):
     let wins = parseInt($wins.text());
     wins++;
     $wins.text(wins.toString());
-    
-    return;
+    break;
   case (false):
     let losses=parseInt($losses.text());
     losses++;
     $losses.text(losses.toString());
-    return;
+    break;
   }
+  randomChoice();
 }
 
 function reset() {
-
+  $wins.text('0');
+  $losses.text('0');
+  randomChoice();
 }
 
 $(

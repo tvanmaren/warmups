@@ -66,8 +66,7 @@ function printString(name, greeting) {
 }
 
 function printStringEs6(name, greeting) {
-  //Your code here
-
+  return `${name} says "${greeting}"`;
 }
 
 //refactor this to  be more concise by using new es6 syntax for 'computed property names'

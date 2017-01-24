@@ -24,7 +24,7 @@ function swap(arr,x,y){
 }
 
 function swapEs6(arr,x,y){
-  //Your code here
+  [arr[x], arr[y]] = [arr[y], arr[x]];
 }
 
 

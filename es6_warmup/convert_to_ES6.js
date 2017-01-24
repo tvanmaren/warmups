@@ -79,7 +79,6 @@ function makeObj(val1, val2) {
 
 function makeObjEs6(val1, val2) {
   return {[val1+val2]: 'Shayna'};
-
 }
 
 //refactor this to be more concise by using new es6 syntax (hint https://ariya.io/2013/02/es6-and-object-literal-property-value-shorthand)
@@ -92,5 +91,5 @@ function ObjProperties(name, grade, favColor) {
 }
 
 function ObjPropertiesEs6(name, grade, favColor) {
-  //Your code here
+  return { name, grade, favColor };
 }

@@ -78,7 +78,7 @@ function makeObj(val1, val2) {
 }
 
 function makeObjEs6(val1, val2) {
-  //Your code here
+  return {[val1+val2]: 'Shayna'};
 
 }
 

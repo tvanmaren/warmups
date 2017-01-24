@@ -17,19 +17,18 @@ module.exports = {
 
 // refactor this to use the es6 destructuring syntax (hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 //x and y are index numbers, this function swaps the values at those indexes
-function swap(arr,x,y){
+function swap(arr, x, y) {
   var temp = arr[x];
   arr[x] = arr[y];
   arr[y] = temp;
 }
 
-function swapEs6(arr,x,y){
+function swapEs6(arr, x, y) {
   [arr[x], arr[y]] = [arr[y], arr[x]];
 }
 
-
 //refactor this to use es6 for...of syntax
-function changeEachElem(array){
+function changeEachElem(array) {
   var result = [];
   for (var i = 0; i < array.length; i++) {
     result.push(array[i]);
@@ -37,49 +36,52 @@ function changeEachElem(array){
   return result;
 }
 
-function changeEachElemEs6(array){
-  //Your code here
+function changeEachElemEs6(array) {
+  var result = [];
+  for (var element of array) {
+    result.push(element);
+  }
+  return result;
 }
 
-
 //refactor this to use es6 arrow function
-function useArrows(array){
-  var result = array.map(function(element){
+function useArrows(array) {
+  var result = array.map(function (element) {
     return element * 2;
   });
 
   return result;
 }
 
-function useArrowsEs6(array){
-  //Your code here
-
+function useArrowsEs6(array) {
+  var result = array.map((element) => {
+    return element * 2;
+  });
+  return result;
 }
 
 //refactor this to use the backticks for string interpolation
-function printString(name,greeting){
-  return name + ' says "' + greeting +'"';
+function printString(name, greeting) {
+  return name + ' says "' + greeting + '"';
 }
 
-function printStringEs6(name,greeting){
+function printStringEs6(name, greeting) {
   //Your code here
 
 }
 
-
 //refactor this to  be more concise by using new es6 syntax for 'computed property names'
-function makeObj(val1,val2){
+function makeObj(val1, val2) {
   var num = val1 + val2;
   var myObj = {};
   myObj[num] = 'Shayna';
   return myObj;
 }
 
-function makeObjEs6(val1,val2){
+function makeObjEs6(val1, val2) {
   //Your code here
 
 }
-
 
 //refactor this to be more concise by using new es6 syntax (hint https://ariya.io/2013/02/es6-and-object-literal-property-value-shorthand)
 function ObjProperties(name, grade, favColor) {
